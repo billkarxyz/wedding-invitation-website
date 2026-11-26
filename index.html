@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amara &amp; Rizky — Undangan Pernikahan</title>
+<meta name="description" content="Undangan pernikahan Amara & Rizky, Sabtu 12 Juni 2027, The Sultan Hotel Jakarta. (Template contoh)">
+<style>
+  :root{
+    --sage:#5f7161; --sage-dark:#44523f; --sage-light:#eef1ea;
+    --gold:#bfa05a; --gold-light:#e8d9b0; --cream:#faf7f0; --ink:#2e332b;
+    --muted:#6d7268; --white:#ffffff; --line:#e3ddd0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+  h1,h2,h3{font-weight:400}
+  .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+  section{padding:56px 0}
+  .eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+  .title{font-size:32px;line-height:1.2;margin:10px 0 6px}
+  .divider{width:64px;height:2px;background:var(--gold);margin:18px auto}
+  .center{text-align:center}
+  .muted{color:var(--muted)}
+  .small{font-size:13px}
+
+  /* ---------- Cover ---------- */
+  #cover{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;
+    background:linear-gradient(rgba(68,82,63,.82),rgba(68,82,63,.82)),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80&auto=format&fit=crop') center/cover no-repeat;
+    color:#fff;padding:24px}
+  #cover .frame{border:1px solid rgba(255,255,255,.55);outline:1px solid rgba(255,255,255,.25);outline-offset:8px;padding:44px 22px;max-width:520px;width:100%}
+  #cover .names{font-size:44px;line-height:1.15;margin:14px 0}
+  #cover .date{letter-spacing:.25em;font-size:13px}
+  #cover .guest{margin-top:26px;font-size:14px;color:#f2ecdd}
+  #cover .guest b{display:block;font-size:18px;margin-top:4px}
+  .btn{display:inline-block;background:var(--gold);color:#fff;border:none;padding:13px 34px;font-size:15px;
+    letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:999px;text-decoration:none;font-family:inherit}
+  .btn:hover{background:#a9853f}
+  .btn.ghost{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+  .btn.ghost:hover{background:var(--gold);color:#fff}
+  #openBtn{margin-top:26px}
+
+  /* ---------- Main (hidden until opened) ---------- */
+  #main{display:none}
+  #main.open{display:block}
+  .hero{text-align:center;padding:72px 0 40px}
+  .hero .names{font-size:46px;line-height:1.15}
+  .hero .amp{color:var(--gold);font-style:italic}
+  .hero .date{letter-spacing:.3em;font-size:13px;margin-top:14px}
+
+  /* Countdown */
+  .countdown{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .cd-box{background:var(--white);border:1px solid var(--line);border-radius:12px;min-width:74px;padding:14px 8px}
+  .cd-box b{display:block;font-size:28px;color:var(--sage-dark);line-height:1}
+  .cd-box span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+  /* Cards */
+  .card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin:14px 0}
+  .card h3{font-size:22px;margin-bottom:4px}
+  .tag{display:inline-block;background:var(--sage-light);color:var(--sage-dark);font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:10px}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .actions .btn{padding:10px 20px;font-size:13px}
+
+  /* Mempelai */
+  .couple{display:grid;grid-template-columns:1fr;gap:16px}
+  @media(min-width:560px){.couple{grid-template-columns:1fr 1fr}}
+  .person{text-align:center}
+  .person .photo{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid var(--gold-light);margin:0 auto 14px;display:block;background:linear-gradient(135deg,var(--sage-light),var(--gold-light))}
+  .person .role{font-style:italic;color:var(--muted);font-size:14px}
+  .person p{font-size:14px}
+
+  /* Love story */
+  .story{position:relative;margin-left:10px;padding-left:26px;border-left:2px solid var(--gold-light)}
+  .story .step{margin-bottom:26px;position:relative}
+  .story .step::before{content:"";position:absolute;left:-33px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold);border:2px solid var(--cream)}
+  .story .year{font-size:13px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase}
+  .story h3{font-size:19px;margin:2px 0 4px}
+  .story p{font-size:14px;color:var(--muted)}
+
+  /* Gallery */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(min-width:560px){.gallery{grid-template-columns:1fr 1fr 1fr}}
+  .gallery figure{aspect-ratio:4/5;border-radius:12px;overflow:hidden;cursor:pointer;position:relative;
+    background:linear-gradient(135deg,var(--sage-light),var(--gold-light))}
+  .gallery img{width:100%;height:100%;object-fit:cover;display:block}
+  .gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:8px 10px;font-size:12px;color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.55))}
+  #lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:60;padding:16px}
+  #lightbox.open{display:flex}
+  #lightbox img{max-width:100%;max-height:85vh;border-radius:8px}
+  #lightbox .close{position:absolute;top:16px;right:20px;color:#fff;font-size:34px;cursor:pointer;background:none;border:none}
+
+  /* RSVP */
+  form label{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+  form input,form select,form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;
+    font-family:inherit;font-size:15px;background:#fff;color:var(--ink)}
+  form textarea{min-height:90px;resize:vertical}
+  .radio-row{display:flex;gap:16px;flex-wrap:wrap}
+  .radio-row label{display:flex;align-items:center;gap:8px;text-transform:none;letter-spacing:0;font-size:15px;color:var(--ink);margin:0}
+  .radio-row input{width:auto}
+  #rsvpOk{display:none;background:#e9f2e4;border:1px solid #b7d3a8;color:#2f5233;border-radius:12px;padding:16px;margin-top:16px}
+  .wish{border-left:3px solid var(--gold);background:#fff;padding:12px 16px;margin:10px 0;border-radius:0 10px 10px 0}
+  .wish b{display:block}
+  .wish .meta{font-size:12px;color:var(--muted)}
+  .wish p{font-size:14px;margin-top:4px}
+
+  /* Amplop */
+  .env-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .env-row:last-child{border-bottom:none}
+  .env-row .num{font-size:18px;letter-spacing:.04em}
+  .copy-btn{background:var(--sage);color:#fff;border:none;padding:8px 16px;border-radius:999px;cursor:pointer;font-size:13px;white-space:nowrap}
+  .copy-btn:hover{background:var(--sage-dark)}
+
+  /* Music toggle */
+  #musicBtn{position:fixed;bottom:18px;right:18px;z-index:50;width:48px;height:48px;border-radius:50%;
+    background:var(--sage);color:#fff;border:2px solid #fff;font-size:20px;cursor:pointer;display:none;
+    box-shadow:0 4px 14px rgba(0,0,0,.25)}
+  #musicBtn.show{display:block}
+  #musicBtn.playing{background:var(--gold)}
+
+  footer{padding:36px 0 90px;text-align:center;color:var(--muted);font-size:13px}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<div id="cover">
+  <div class="frame">
+    <div class="eyebrow" style="color:#e8d9b0">Undangan Pernikahan</div>
+    <div class="names">Amara<br>&amp;<br>Rizky</div>
+    <div class="divider" style="background:#e8d9b0"></div>
+    <div class="date">SABTU, 12 JUNI 2027</div>
+    <div class="guest">Kepada Yth.<br>Bapak/Ibu/Saudara/i<b id="guestName">Tamu Undangan</b></div>
+    <button class="btn" id="openBtn" type="button">✉&nbsp; Buka Undangan</button>
+    <p class="small" style="margin-top:18px;color:#e6dfcb">* Template contoh — nama &amp; data di halaman ini adalah contoh.</p>
+  </div>
+</div>
+
+<!-- ================= MAIN ================= -->
+<main id="main">
+  <div class="wrap">
+
+    <div class="hero reveal">
+      <div class="eyebrow">Undangan Pernikahan</div>
+      <div class="names">Amara <span class="amp">&amp;</span> Rizky</div>
+      <div class="divider"></div>
+      <div class="date">SABTU, 12 JUNI 2027 &nbsp;•&nbsp; JAKARTA</div>
+      <p class="muted" style="margin-top:18px;font-style:italic">“Dua hati, satu tujuan —<br>dengan restu keluarga, kami melangkah bersama.”</p>
+    </div>
+
+    <!-- Countdown -->
+    <section class="center reveal" style="padding-top:10px">
+      <div class="eyebrow">Menghitung Hari</div>
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><b id="cdD">0</b><span>Hari</span></div>
+        <div class="cd-box"><b id="cdH">0</b><span>Jam</span></div>
+        <div class="cd-box"><b id="cdM">0</b><span>Menit</span></div>
+        <div class="cd-box"><b id="cdS">0</b><span>Detik</span></div>
+      </div>
+      <p class="muted small" style="margin-top:14px">Sabtu, 12 Juni 2027 — The Sultan Hotel Jakarta</p>
+    </section>
+
+    <!-- Mempelai -->
+    <section class="reveal">
+      <div class="center">
+        <div class="eyebrow">Mempelai</div>
+        <h2 class="title">Dua Hati yang Bersatu</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="couple">
+        <div class="card person">
+          <img class="photo" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=400&q=80&auto=format&fit=crop" alt="Mempelai wanita" onerror="this.style.visibility='hidden'">
+          <h3>Amara Putri, S.H.</h3>
+          <div class="role">Mempelai Wanita</div>
+          <p>Putri pertama dari Bapak Andi Wijaya &amp; Ibu Sari Wijaya</p>
+        </div>
+        <div class="card person">
+          <img class="photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop" alt="Mempelai pria" onerror="this.style.visibility='hidden'">
+          <h3>Rizky Pratama, S.T.</h3>
+          <div class="role">Mempelai Pria</div>
+          <p>Putra kedua dari Bapak Budi Santoso &amp; Ibu Dewi Santoso</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acara -->
+    <section class="reveal">
+      <div class="center">
+        <div class="eyebrow">Rangkaian Acara</div>
+        <h2 class="title">Save The Date</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="card center">
+        <span class="tag">Akad Nikah</span>
+        <h3>Sabtu, 12 Juni 2027</h3>
+        <p>08.00 – 10.00 WIB</p>
+        <p class="muted">The Sultan Hotel Jakarta<br>Jl. Gatot Subroto, Jakarta</p>
+        <div class="actions" style="justify-content:center">
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=The+Sultan+Hotel+Jakarta">📍 Lihat Lokasi</a>
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Akad+Nikah+Amara+%26+Rizky&amp;dates=20270612T010000Z/20270612T030000Z&amp;details=Akad+nikah+Amara+%26+Rizky&amp;location=The+Sultan+Hotel+Jakarta">📅 Simpan Tanggal</a>
+        </div>
+      </div>
+      <div class="card center">
+        <span class="tag">Resepsi</span>
+        <h3>Sabtu, 12 Juni 2027</h3>
+        <p>11.00 – 14.00 WIB</p>
+        <p class="muted">The Sultan Hotel Jakarta<br>Jl. Gatot Subroto, Jakarta</p>
+        <div class="actions" style="justify-content:center">
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=The+Sultan+Hotel+Jakarta">📍 Lihat Lokasi</a>
+          <a class="btn ghost" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Resepsi+Pernikahan+Amara+%26+Rizky&amp;dates=20270612T040000Z/20270612T070000Z&amp;details=Resepsi+pernikahan+Amara+%26+Rizky&amp;location=The+Sultan+Hotel+Jakarta">📅 Simpan Tanggal</a>
+        </div>
+      </div>
+      <div class="card center">
+        <span class="tag">Dress Code</span>
+        <h3>Sage Green &amp; Emas</h3>
+        <p class="muted">Tamu dimohon mengenakan busana bernuansa hijau sage atau emas.<br>Sepatu hak yang nyaman disarankan — resepsi di taman.</p>
+      </div>
+    </section>
+
+    <!-- Love story -->
+    <section class="reveal">
+      <div class="center">
+        <div class="eyebrow">Kisah Kami</div>
+        <h2 class="title">Love Story</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="story">
+        <div class="step"><div class="year">2019</div><h3>Pertemuan Pertama</h3><p>Kami bertemu di sebuah seminar di Jakarta — Amara duduk di baris depan, Rizky kehabisan kursi dan duduk di sebelahnya.</p></div>
+        <div class="step"><div class="year">2021</div><h3>Menjalin Kasih</h3><p>Setelah dua tahun berteman, Rizky memberanikan diri mengajak Amara makan malam pertama mereka.</p></div>
+        <div class="step"><div class="year">2025</div><h3>Lamaran</h3><p>Di bawah langit senja Pantai Anyer, Rizky melamar — dan Amara menjawab “ya”.</p></div>
+        <div class="step"><div class="year">2027</div><h3>Menuju Selamanya</h3><p>Dengan restu kedua keluarga, kami mengikat janji suci pada 12 Juni 2027.</p></div>
+      </div>
+    </section>
+
+    <!-- Galeri -->
+    <section class="reveal">
+      <div class="center">
+        <div class="eyebrow">Galeri</div>
+        <h2 class="title">Momen Bahagia</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="gallery" id="gallery">
+        <figure><img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80&auto=format&fit=crop" alt="Momen 1" loading="lazy" onerror="this.style.display='none'"><figcaption>Pertunangan</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80&auto=format&fit=crop" alt="Momen 2" loading="lazy" onerror="this.style.display='none'"><figcaption>Prewedding</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80&auto=format&fit=crop" alt="Momen 3" loading="lazy" onerror="this.style.display='none'"><figcaption>Cincin</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&q=80&auto=format&fit=crop" alt="Momen 4" loading="lazy" onerror="this.style.display='none'"><figcaption>Perayaan</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80&auto=format&fit=crop" alt="Momen 5" loading="lazy" onerror="this.style.display='none'"><figcaption>Bersama</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=800&q=80&auto=format&fit=crop" alt="Momen 6" loading="lazy" onerror="this.style.display='none'"><figcaption>Pengantin</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="reveal">
+      <div class="center">
+        <div class="eyebrow">Konfirmasi Kehadiran</div>
+        <h2 class="title">RSVP</h2>
+        <div class="divider"></div>
+        <p class="muted">Mohon konfirmasi kehadiran Anda sebelum <b>1 Juni 2027</b>.</p>
+      </div>
+      <div class="card">
+        <form id="rsvpForm">
+          <label for="rsvpName">Nama</label>
+          <input id="rsvpName" type="text" placeholder="Nama Anda" required>
+          <label>Kehadiran</label>
+          <div class="radio-row">
+            <label><input type="radio" name="attend" value="Hadir" checked> Hadir</label>
+            <label><input type="radio" name="attend" value="Tidak Hadir"> Tidak Hadir</label>
+          </div>
+          <label for="rsvpMsg">Ucapan &amp; Doa</label>
+          <textarea id="rsvpMsg" placeholder="Tulis ucapan untuk kedua mempelai..."></textarea>
+          <div style="margin-top:18px"><button class="btn" type="submit" style="width:100%">Kirim Konfirmasi</button></div>
+        </form>
+        <div id="rsvpOk">
+          <b>✓ Terima kasih, <span id="rsvpOkName"></span>!</b>
+          <p class="small">Konfirmasi Anda sudah tercatat dan ucapan Anda tampil di dinding ucapan di bawah.</p>
+          <div style="margin-top:12px"><a class="btn ghost" id="waLink" target="_blank" rel="noopener" href="#">Kirim via WhatsApp</a></div>
+        </div>
+      </div>
+      <h3 style="margin-top:28px">💌 Dinding Ucapan</h3>
+      <div id="wishes"><p class="muted small">Belum ada ucapan — jadilah yang pertama!</p></div>
+    </section>
+
+    <!-- Amplop digital -->
+    <section class="reveal">
+      <div class="center">
+        <div class="eyebrow">Tanda Kasih</div>
+        <h2 class="title">Amplop Digital</h2>
+        <div class="divider"></div>
+        <p class="muted">Kehadiran Anda adalah hadiah terindah. Namun jika ingin berbagi tanda kasih, silakan melalui:</p>
+      </div>
+      <div class="card">
+        <div class="env-row"><div><b>Bank BCA</b><div class="num" data-copy="1234567890">1234567890</div><div class="muted small">a.n. Amara Putri (contoh)</div></div><button class="copy-btn" type="button" data-copy="1234567890">Salin</button></div>
+        <div class="env-row"><div><b>Bank Mandiri</b><div class="num" data-copy="1370012345678">1370012345678</div><div class="muted small">a.n. Rizky Pratama (contoh)</div></div><button class="copy-btn" type="button" data-copy="1370012345678">Salin</button></div>
+        <div class="env-row"><div><b>DANA / OVO</b><div class="num" data-copy="081234567890">0812-3456-7890</div><div class="muted small">a.n. Amara Putri (contoh)</div></div><button class="copy-btn" type="button" data-copy="081234567890">Salin</button></div>
+        <div class="env-row"><div><b>Kirim Kado</b><div class="muted">Jl. Merdeka No. 12, Jakarta Selatan 12190 (contoh alamat)</div></div><button class="copy-btn" type="button" data-copy="Jl. Merdeka No. 12, Jakarta Selatan 12190">Salin</button></div>
+      </div>
+      <p class="muted small center">* Semua nomor rekening, e-wallet, dan alamat di atas adalah CONTOH dan harus diganti dengan data asli mempelai.</p>
+    </section>
+
+    <footer>
+      <p>Amara &amp; Rizky — 12 Juni 2027</p>
+      <p class="small">Dibuat dengan ♥ — template undangan pernikahan (data contoh).</p>
+    </footer>
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox"><button class="close" type="button" aria-label="Tutup">&times;</button><img id="lightboxImg" src="" alt="Foto galeri"></div>
+
+<!-- Music toggle -->
+<button id="musicBtn" type="button" title="Musik" aria-label="Musik">♪</button>
+
+<script>
+// ---------- Nama tamu dari ?to= ----------
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var to = params.get('to');
+  if (to) {
+    var clean = to.trim().slice(0, 60);
+    if (clean) document.getElementById('guestName').textContent = clean;
+  }
+})();
+
+// ---------- Buka undangan ----------
+document.getElementById('openBtn').addEventListener('click', function(){
+  document.getElementById('cover').style.display = 'none';
+  document.getElementById('main').classList.add('open');
+  document.getElementById('musicBtn').classList.add('show');
+  document.body.style.overflow = '';
+  window.scrollTo(0, 0);
+  initReveal();
+});
+
+// ---------- Countdown ke 12 Juni 2027 08:00 WIB ----------
+var target = new Date('2027-06-12T08:00:00+07:00').getTime();
+function tick(){
+  var diff = target - Date.now();
+  if (diff < 0) diff = 0;
+  var d = Math.floor(diff / 86400000);
+  var h = Math.floor(diff % 86400000 / 3600000);
+  var m = Math.floor(diff % 3600000 / 60000);
+  var s = Math.floor(diff % 60000 / 1000);
+  document.getElementById('cdD').textContent = d;
+  document.getElementById('cdH').textContent = String(h).padStart(2, '0');
+  document.getElementById('cdM').textContent = String(m).padStart(2, '0');
+  document.getElementById('cdS').textContent = String(s).padStart(2, '0');
+}
+tick();
+setInterval(tick, 1000);
+
+// ---------- Musik lembut (WebAudio, tanpa file eksternal) ----------
+var audioCtx = null, musicTimer = null, musicOn = false;
+// Melodi lembut (nada kotak musik) — berulang
+var melody = [523.25, 659.25, 783.99, 1046.50, 783.99, 659.25, 587.33, 659.25];
+var noteIdx = 0;
+function playNote(freq){
+  var osc = audioCtx.createOscillator();
+  var gain = audioCtx.createGain();
+  osc.type = 'sine';
+  osc.frequency.value = freq;
+  gain.gain.setValueAtTime(0.0001, audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 0.02);
+  gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.4);
+  osc.connect(gain); gain.connect(audioCtx.destination);
+  osc.start(); osc.stop(audioCtx.currentTime + 1.5);
+}
+document.getElementById('musicBtn').addEventListener('click', function(){
+  var btn = this;
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  musicOn = !musicOn;
+  btn.classList.toggle('playing', musicOn);
+  btn.textContent = musicOn ? '✕' : '♪';
+  if (musicOn) {
+    playNote(melody[noteIdx++ % melody.length]);
+    musicTimer = setInterval(function(){ playNote(melody[noteIdx++ % melody.length]); }, 700);
+  } else if (musicTimer) {
+    clearInterval(musicTimer); musicTimer = null;
+  }
+});
+
+// ---------- Galeri lightbox ----------
+var lightbox = document.getElementById('lightbox');
+var lightboxImg = document.getElementById('lightboxImg');
+document.querySelectorAll('#gallery figure').forEach(function(fig){
+  fig.addEventListener('click', function(){
+    var img = fig.querySelector('img');
+    if (!img || img.style.display === 'none') return;
+    lightboxImg.src = img.src;
+    lightbox.classList.add('open');
+  });
+});
+lightbox.addEventListener('click', function(){ lightbox.classList.remove('open'); });
+
+// ---------- RSVP + dinding ucapan (localStorage) ----------
+var WISH_KEY = 'wedding-wishes-amara-rizky';
+function loadWishes(){
+  try { return JSON.parse(localStorage.getItem(WISH_KEY)) || []; }
+  catch (e) { return []; }
+}
+function renderWishes(){
+  var list = loadWishes();
+  var box = document.getElementById('wishes');
+  if (!list.length) {
+    box.innerHTML = '<p class="muted small">Belum ada ucapan — jadilah yang pertama!</p>';
+    return;
+  }
+  box.innerHTML = '';
+  list.slice().reverse().forEach(function(w){
+    var div = document.createElement('div');
+    div.className = 'wish';
+    var b = document.createElement('b'); b.textContent = w.name;
+    var meta = document.createElement('div'); meta.className = 'meta';
+    meta.textContent = w.attend + ' • ' + w.date;
+    var p = document.createElement('p'); p.textContent = w.msg || '—';
+    div.appendChild(b); div.appendChild(meta); div.appendChild(p);
+    box.appendChild(div);
+  });
+}
+renderWishes();
+document.getElementById('rsvpForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var name = document.getElementById('rsvpName').value.trim();
+  var msg = document.getElementById('rsvpMsg').value.trim();
+  if (!name) return;
+  var attend = (document.querySelector('input[name="attend"]:checked') || {}).value || 'Hadir';
+  var list = loadWishes();
+  list.push({ name: name, attend: attend, msg: msg,
+    date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }) });
+  try { localStorage.setItem(WISH_KEY, JSON.stringify(list)); } catch (err) {}
+  renderWishes();
+  document.getElementById('rsvpOkName').textContent = name;
+  document.getElementById('rsvpOk').style.display = 'block';
+  var text = 'Halo Amara & Rizky! Saya ' + name + ' (' + attend + '). ' + (msg ? 'Ucapan: ' + msg : '');
+  // Nomor WhatsApp contoh — ganti dengan nomor asli mempelai
+  document.getElementById('waLink').href = 'https://wa.me/6281234567890?text=' + encodeURIComponent(text);
+  document.getElementById('rsvpForm').reset();
+  document.getElementById('rsvpOk').scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
+
+// ---------- Tombol salin amplop ----------
+document.querySelectorAll('.copy-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = btn.getAttribute('data-copy');
+    function done(){ btn.textContent = 'Disalin ✓'; setTimeout(function(){ btn.textContent = 'Salin'; }, 2000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function(){ fallbackCopy(text); done(); });
+    } else { fallbackCopy(text); done(); }
+  });
+});
+function fallbackCopy(text){
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+// ---------- Reveal on scroll ----------
+var revealObserver = null;
+function initReveal(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+    return;
+  }
+  revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting) { en.target.classList.add('visible'); revealObserver.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ revealObserver.observe(el); });
+}
+</script>
+</body>
+</html>
